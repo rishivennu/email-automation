@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Email Automation Bot</title>
+  <!-- Link to external CSS file in the static directory -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+  <header>
+    <h1>Neo-Brutalism Email Automation</h1>
+    <p>Upload your recipients and messages, and let the bot take care of the rest!</p>
+  </header>
+  
+  <main>
+    <!-- Upload Section -->
+    <section class="cta">
+      <h2>Upload Recipients & Messages</h2>
+      <form action="/upload" method="POST" enctype="multipart/form-data">
+        <label for="recipients_file">Recipients File (.txt):</label>
+        <input type="file" name="recipients_file" required><br><br>
+
+        <label for="messages_file">Messages File (.txt):</label>
+        <input type="file" name="messages_file" required><br><br>
+
+        <button type="submit" class="btn-cta">Upload Files</button>
+      </form>
+    </section>
+
+    <!-- Start Automation Section -->
+    <section class="cta">
+      <h2>Start Email Automation</h2>
+      <form action="/start-sending" method="POST">
+        <button type="submit" class="btn-cta">Start Automation</button>
+      </form>
+    </section>
+
+    <!--
