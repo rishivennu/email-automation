@@ -1,27 +1,27 @@
+import os
 import yagmail
 import random
 import time
 
-EMAIL = "2100032141@gmail.com"  # Replace with your email
-APP_PASSWORD = "ktan ujvq uutp ovcv"  # Replace with your app password
+EMAIL = os.environ.get("EMAIL")
+APP_PASSWORD = os.environ.get("APP_PASSWORD")
 
-# Load recipients and messages
+yag = yagmail.SMTP(EMAIL, APP_PASSWORD)
+
 def load_data(file_path):
-    with open(file_path, 'r') as file:
+    with open(file_path, "r") as file:
         return [line.strip() for line in file if line.strip()]
 
-recipients = load_data('recipients.txt')
-messages = load_data('messages.txt')
-
-# Send a random email
 def send_random_email():
-    yag = yagmail.SMTP(EMAIL, APP_PASSWORD)
-    for recipient in recipients:
-        subject = "A little note for you ✨"
-        body = random.choice(messages)
-        yag.send(to=recipient, subject=subject, contents=body)
-        print(f"[SENT] Email to {recipient}")
-    print("✅ All emails sent!")
+    recipients = load_data("recipients.txt")
+    subjects = load_data("subjects.txt")
+    messages = load_data("messages.txt")
 
-# Call the send_random_email() function once
+    recipient = random.choice(recipients)
+    subject = random.choice(subjects)
+    body = random.choice(messages)
+
+    yag.send(to=recipient, subject=subject, contents=body)
+    print(f"Email sent to {recipient} with subject: {subject}")
+
 send_random_email()
