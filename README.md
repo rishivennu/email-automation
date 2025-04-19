@@ -12,21 +12,20 @@ Clone the repository to your local machine:
 git clone https://github.com/rishivennu/email-automation.git
 cd email-automation
 
-✅ Here's How to Generate Your Gmail App Password:
-🔐 Step 1: Enable 2-Step Verification
-Go to Google My Account – Security
+Step 2: Install Python and Dependencies
+Before you begin, ensure Python is installed on your machine. If you don’t have it installed, you can download and install Python from here.
 
-Under “Signing in to Google”, enable 2-Step Verification
+Next, install the required dependencies for this project:
 
-🔑 Step 2: Generate an App Password
-After enabling 2FA, go back to Security
+Open a terminal and navigate to the project folder where the requirements.txt file is located.
 
-Under “Signing in to Google” → click App passwords
+Run the following command to install the necessary Python libraries:
 
-Sign in again if asked
-
-Under “Select app” → choose Mail
-
+bash
+Copy
+Edit
+pip install -r requirements.txt
+This will install all the necessary packages, including yagmail (for sending emails) and schedule (for scheduling tasks).
 Under “Select device” → choose Other and name it email-bot or anything
 
 Click Generate
