@@ -7,7 +7,7 @@ app = Flask(__name__)
 EMAIL = "your@gmail.com"
 APP_PASSWORD = "your_app_password"
 
-recipients = ["example1@gmail.com", "example2@gmail.com"]
+recipients = ["rishivennu54@gmail.com", "example2@gmail.com"]
 subjects = ["Good morning", "Hello!", "Just checking in"]
 messages = [
     "Hope you have a great day!",
