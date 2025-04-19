@@ -1,3 +1,17 @@
+# Email Automation Bot
+
+## Overview
+This project automates sending random emails to recipients at a scheduled time. The bot uses **Gmail SMTP** and can be run locally or deployed to the cloud.
+
+## Steps to Set Up
+
+### Step 1: Clone the Repository
+Clone the repository to your local machine:
+
+```bash
+git clone https://github.com/rishivennu/email-automation.git
+cd email-automation
+
 ✅ Here's How to Generate Your Gmail App Password:
 🔐 Step 1: Enable 2-Step Verification
 Go to Google My Account – Security
