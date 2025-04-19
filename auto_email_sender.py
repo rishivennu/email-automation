@@ -2,8 +2,8 @@ import yagmail
 import random
 import time
 
-EMAIL = "your@gmail.com"  # Replace with your email
-APP_PASSWORD = "your password"  # Replace with your app password
+EMAIL = "2100032141@gmail.com"  # Replace with your email
+APP_PASSWORD = "ktan ujvq uutp ovcv"  # Replace with your app password
 
 # Load recipients and messages
 def load_data(file_path):
